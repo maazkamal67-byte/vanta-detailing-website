@@ -1,0 +1,1322 @@
+/* ==========================================================================
+   VANTA DETAILING - Premium Mobile Car Care
+   Theme: Dark Luxury / Travel
+   ========================================================================== */
+
+:root {
+  /* Core Dark Luxury / Travel Palette */
+  --bg-body: #050505;
+  --bg-primary: #080808;
+  --bg-surface: #0a0a0a;
+  --bg-surface-elevated: #111111;
+  --bg-card: #0c0c0c;
+  --bg-card-hover: #121212;
+  --bg-glass: rgba(10, 10, 10, 0.85);
+  
+  /* Borders - Crisp, Fine Editorial Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-accent: rgba(229, 195, 120, 0.35);
+  
+  /* Text */
+  --text-pure: #ffffff;
+  --text-primary: #f3f3f3;
+  --text-secondary: rgba(255, 255, 255, 0.70);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-dim: rgba(255, 255, 255, 0.25);
+  
+  /* Luxury Warm Champagne & Titanium Gold Accents */
+  --accent-gold: #d4af37;
+  --accent-champagne: #e5c378;
+  --accent-light: #f5dfa8;
+  --accent-glow: rgba(229, 195, 120, 0.12);
+  --accent-gradient: linear-gradient(135deg, #ffffff 0%, #e5c378 60%, #c49e47 100%);
+  --accent-gradient-gold: linear-gradient(135deg, #f5dfa8 0%, #d4af37 50%, #aa841e 100%);
+  
+  /* Live Status */
+  --live-red: #ef4444;
+  --live-glow: rgba(239, 68, 68, 0.4);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.95);
+  --shadow-glow: 0 0 40px rgba(229, 195, 120, 0.08);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Radius - Sharp Luxury Travel Feel */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 9999px;
+}
+
+/* Base Resets & Global Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-body);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 1rem;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display & Heading Typography - Editorial Serif Luxury */
+h1, h2, h3, h4, h5, h6,
+.font-display,
+.heading-hero,
+.heading-section {
+  font-family: 'Playfair Display', 'Georgia', 'Cinzel', serif;
+  color: var(--text-pure);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.heading-hero {
+  font-size: clamp(2.75rem, 7vw, 5.25rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.heading-section {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.heading-card {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.lead-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.lead-text.italic,
+p.lead-text {
+  font-style: normal;
+}
+
+/* Luxury Monospace / Small Labels / Eyebrows */
+.badge-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-medium);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.badge-label-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent-champagne);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--accent-champagne);
+}
+
+.badge-demo {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-champagne);
+  background: rgba(229, 195, 120, 0.08);
+  border: 1px solid rgba(229, 195, 120, 0.25);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* Live Dispatch Indicator */
+.badge-live-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-pure);
+  border: 1px solid var(--border-medium);
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--live-red);
+  border-radius: 50%;
+  animation: livePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  box-shadow: 0 0 8px var(--live-glow);
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  z-index: 1050;
+  transition: width 0.1s linear;
+}
+
+/* Header & Navbar - Minimalist Dark Luxury Travel */
+.navbar-vanta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  transition: all var(--transition-smooth);
+  background: transparent;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.navbar-vanta.scrolled {
+  padding: 0.95rem 0;
+  background: rgba(5, 5, 5, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-medium);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.9);
+}
+
+.navbar-brand-vanta {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.navbar-brand-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--text-pure);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1;
+}
+
+.navbar-brand-tagline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.nav-link-vanta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.5rem 1.1rem;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-link-vanta:hover {
+  color: var(--text-pure);
+}
+
+.nav-link-vanta.active {
+  color: var(--text-pure);
+}
+
+.nav-link-vanta.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.1rem;
+  right: 1.1rem;
+  height: 1px;
+  background: var(--text-pure);
+}
+
+/* Custom Buttons - High Contrast Luxury */
+.btn-vanta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.btn-vanta-primary {
+  background: #ffffff;
+  color: #050505 !important;
+  border-color: #ffffff;
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.15);
+}
+
+.btn-vanta-primary:hover {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(255, 255, 255, 0.88);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  color: #000000 !important;
+}
+
+.btn-vanta-secondary {
+  background: transparent;
+  color: var(--text-pure);
+  border: 1px solid var(--border-strong);
+  backdrop-filter: blur(10px);
+}
+
+.btn-vanta-secondary:hover {
+  background: #ffffff;
+  color: #050505 !important;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-vanta-outline-gold {
+  background: transparent;
+  color: var(--accent-champagne);
+  border: 1px solid rgba(229, 195, 120, 0.4);
+}
+
+.btn-vanta-outline-gold:hover {
+  background: var(--accent-champagne);
+  color: #050505 !important;
+  border-color: var(--accent-champagne);
+  transform: translateY(-2px);
+}
+
+/* Cinematic Hero Section */
+.hero-vanta {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 9rem 0 6rem;
+  overflow: hidden;
+  background-color: var(--bg-body);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  transform: scale(1.03);
+  animation: heroZoom 16s ease-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  0% { transform: scale(1.02); }
+  100% { transform: scale(1.07); }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 5, 0.85) 0%,
+    rgba(5, 5, 5, 0.6) 40%,
+    rgba(5, 5, 5, 0.98) 100%
+  ),
+  radial-gradient(
+    circle at 75% 30%,
+    rgba(255, 255, 255, 0.04) 0%,
+    transparent 60%
+  );
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-divider-line {
+  width: 32px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.hero-scroll-indicator:hover {
+  color: var(--text-pure);
+}
+
+.scroll-mouse {
+  width: 20px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  position: relative;
+}
+
+.scroll-wheel {
+  width: 2px;
+  height: 5px;
+  background: #ffffff;
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 2s infinite ease-in-out;
+}
+
+@keyframes scrollWheel {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  80% { transform: translate(-50%, 12px); opacity: 0; }
+  100% { transform: translate(-50%, 0); opacity: 0; }
+}
+
+/* Trust Bar / Editorial Strip */
+.trust-strip {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 2rem 0;
+  position: relative;
+  z-index: 4;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+
+.trust-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-champagne);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.trust-item:hover .trust-icon-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-strong);
+  color: #ffffff;
+}
+
+.trust-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-pure);
+  margin-bottom: 0.15rem;
+}
+
+.trust-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Sections Global */
+.section-py {
+  padding: 7rem 0;
+}
+
+.section-bg-dark {
+  background-color: var(--bg-body);
+}
+
+.section-bg-surface {
+  background-color: var(--bg-surface);
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+/* Custom Dark Luxury Cards */
+.vanta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vanta-card:hover {
+  transform: translateY(-5px);
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background-color: #080808;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanta-card:hover .card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.card-badge-top {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.card-body-vanta {
+  padding: 2rem 1.85rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-price-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--accent-champagne);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.card-title-vanta {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text-pure);
+  margin-bottom: 0.85rem;
+}
+
+.card-text-vanta {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  line-height: 1.7;
+}
+
+.card-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+}
+
+.card-features-list li {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.card-features-list li i {
+  color: var(--accent-champagne);
+  font-size: 0.85rem;
+}
+
+/* Interactive Before / After Comparison Slider */
+.before-after-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-lg);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.before-after-img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.before-after-img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.before-img-wrap {
+  width: 50%;
+  z-index: 2;
+  border-right: 1px solid #ffffff;
+}
+
+.before-img-wrap img {
+  width: 100%;
+  max-width: none;
+}
+
+.ba-tag {
+  position: absolute;
+  top: 1.25rem;
+  padding: 0.35rem 0.85rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  z-index: 5;
+}
+
+.ba-tag-before {
+  left: 1.25rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-medium);
+}
+
+.ba-tag-after {
+  right: 1.25rem;
+  background: #ffffff;
+  color: #050505;
+  font-weight: 800;
+}
+
+.ba-slider-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ffffff;
+  z-index: 10;
+  cursor: ew-resize;
+  transform: translateX(-50%);
+}
+
+.ba-handle-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 255, 255, 0.4);
+  font-size: 0.95rem;
+  border: 2px solid #050505;
+}
+
+/* 3-Step Process - Editorial Travel Numbering */
+.process-step-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 2.5rem 2rem;
+  height: 100%;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.process-step-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
+}
+
+.process-num {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-dim);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color var(--transition-fast);
+}
+
+.process-step-card:hover .process-num {
+  color: var(--accent-champagne);
+}
+
+.process-step-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--text-pure);
+  margin-bottom: 0.75rem;
+}
+
+.process-step-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Gallery Masonry & Overlays */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+}
+
+.gallery-item.tall {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(5, 5, 5, 0.95) 0%, rgba(5, 5, 5, 0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-pure);
+  margin-bottom: 0.25rem;
+}
+
+.gallery-category {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-champagne);
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 2.5rem 2.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+}
+
+.testimonial-stars {
+  color: var(--accent-champagne);
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.testimonial-quote {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-champagne);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.author-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: var(--text-pure);
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.author-car {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Split Showcase Feature */
+.split-image-container {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.split-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stats Block - Editorial Serif */
+.stats-strip {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 3rem 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.stat-number {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--text-pure);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* FAQ Accordion */
+.accordion-vanta .accordion-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm) !important;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.accordion-vanta .accordion-item:hover {
+  border-color: var(--border-medium);
+}
+
+.accordion-vanta .accordion-button {
+  background: var(--bg-card);
+  color: var(--text-pure);
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  padding: 1.4rem 1.6rem;
+  box-shadow: none !important;
+}
+
+.accordion-vanta .accordion-button:not(.collapsed) {
+  color: var(--accent-champagne);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.accordion-vanta .accordion-button::after {
+  filter: invert(1) brightness(0.8);
+}
+
+.accordion-vanta .accordion-button:not(.collapsed)::after {
+  filter: invert(80%) sepia(40%) saturate(400%) hue-rotate(350deg) brightness(100%);
+}
+
+.accordion-vanta .accordion-body {
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  padding: 1.25rem 1.6rem 1.6rem;
+  line-height: 1.75;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Forms & Inputs */
+.form-vanta-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-vanta-label {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.form-vanta-control,
+.form-vanta-select {
+  width: 100%;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.1rem;
+  color: var(--text-pure);
+  font-size: 0.92rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.form-vanta-control:focus,
+.form-vanta-select:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+  background: #111111;
+}
+
+.form-vanta-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-vanta-select option {
+  background: var(--bg-surface-elevated);
+  color: var(--text-pure);
+}
+
+/* Success Modal / Toast */
+.modal-vanta .modal-content {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-vanta .modal-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1.5rem 1.75rem;
+}
+
+.modal-vanta .modal-body {
+  padding: 2rem 1.75rem;
+}
+
+.modal-vanta .modal-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 1.25rem 1.75rem;
+}
+
+/* Footer - Dark Luxury Travel Minimalist */
+.footer-vanta {
+  background: #020202;
+  border-top: 1px solid var(--border-subtle);
+  padding: 5.5rem 0 2.5rem;
+  color: var(--text-secondary);
+}
+
+.footer-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-pure);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-medium);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-social-icon:hover {
+  background: #ffffff;
+  color: #050505;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.footer-country-badge {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-right: 0.4rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  margin-top: 4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Subpage Hero (Services, About, Contact) */
+.subpage-hero {
+  position: relative;
+  padding: 10.5rem 0 5.5rem;
+  background: var(--bg-body);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.subpage-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.18;
+  filter: grayscale(30%);
+}
+
+.subpage-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.85) 0%, rgba(5, 5, 5, 0.98) 100%);
+}
+
+.subpage-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Interactive Pricing Estimator Widget */
+.estimator-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 2.75rem 2.25rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.option-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.option-pill-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  padding: 0.65rem 1.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.option-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-pure);
+  border-color: var(--border-strong);
+}
+
+.option-pill-btn.active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #050505 !important;
+  font-weight: 700;
+}
+
+/* Service Area Interactive Map / Grid */
+.coverage-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 2.25rem;
+}
+
+.coverage-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin: 0.25rem;
+  letter-spacing: 0.04em;
+}
+
+.coverage-pill i {
+  color: var(--accent-champagne);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .section-py {
+    padding: 5rem 0;
+  }
+  
+  .navbar-collapse {
+    background: var(--bg-surface-elevated);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-medium);
+    margin-top: 1rem;
+  }
+  
+  .nav-link-vanta.active::after {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .heading-hero {
+    font-size: 2.4rem;
+  }
+  
+  .btn-vanta {
+    width: 100%;
+  }
+  
+  .before-after-container {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

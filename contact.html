@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Booking | VANTA DETAILING</title>
+  <meta name="description" content="Book your mobile detailing appointment with VANTA DETAILING. Request an accurate quote for exterior, interior, or ceramic protection at your location.">
+  <meta property="og:title" content="Contact & Booking | VANTA DETAILING">
+  <meta property="og:description" content="Request a mobile car detailing appointment. Concierge car care delivered to your door.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Dark Luxury Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-vanta" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-vanta" href="index.html" id="navBrand">
+          <span class="navbar-brand-title">
+            <i class="bi bi-shield-shaded" style="color: var(--accent-champagne); font-size: 1.25rem;"></i>
+            VANTA DETAILING
+          </span>
+          <span class="navbar-brand-tagline">Premium Mobile Car Care</span>
+        </a>
+
+        <button class="navbar-toggler border-0 text-white p-2" type="button" data-bs-toggle="collapse" data-bs-target="#vantaNavCollapse" aria-controls="vantaNavCollapse" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggleBtn">
+          <i class="bi bi-list fs-2" style="color: var(--accent-champagne);"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="vantaNavCollapse">
+          <ul class="navbar-nav align-items-lg-center gap-lg-1 my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="index.html" id="navLinkHome">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="services.html" id="navLinkServices">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="about.html" id="navLinkAbout">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="contact.html" id="navLinkContact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-vanta btn-vanta-primary w-100" href="contact.html" id="navCtaBtn">
+                <span>BOOK A DETAIL</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <!-- SUBPAGE HERO -->
+    <section class="subpage-hero text-center" id="contactHero">
+      <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=2000&auto=format&fit=crop" 
+           alt="Cockpit automotive detailing booking background" 
+           class="subpage-hero-bg">
+      <div class="subpage-hero-overlay"></div>
+
+      <div class="container subpage-hero-content" data-aos="fade-up">
+        <span class="badge-label mb-3">CONCIERGE BOOKING</span>
+        <h1 class="heading-hero text-white mb-3">LET'S DETAIL YOUR CAR.</h1>
+        <p class="lead-text mx-auto" style="max-width: 650px;">
+          Tell us about your vehicle and the service you're looking for. Our mobile studio comes directly to your location with self-contained power and deionized water.
+        </p>
+      </div>
+    </section>
+
+    <!-- BOOKING & CONTACT SPLIT SECTION -->
+    <section class="section-py section-bg-dark" id="bookingFormSection">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Left: High-Conversion Booking Form -->
+          <div class="col-lg-8" data-aos="fade-right">
+            <div class="p-4 p-md-5 rounded-3" style="background: var(--bg-card); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg);">
+              <div class="mb-4">
+                <span class="badge-label mb-2">QUICK QUOTE & RESERVATION</span>
+                <h2 class="h3 text-white">Vehicle & Appointment Details</h2>
+                <p class="text-secondary small mb-0">Fill in the specifications below for a bespoke quote and confirmation.</p>
+              </div>
+
+              <form id="vantaBookingForm" class="needs-validation" novalidate>
+                <!-- Client Details Row -->
+                <div class="row g-3">
+                  <div class="col-md-6 form-vanta-group">
+                    <label for="fullName" class="form-vanta-label">Full Name *</label>
+                    <input type="text" class="form-vanta-control" id="fullName" placeholder="e.g. Arthur Pendelton" required>
+                    <div class="invalid-feedback">Please provide your name.</div>
+                  </div>
+
+                  <div class="col-md-6 form-vanta-group">
+                    <label for="email" class="form-vanta-label">Email Address *</label>
+                    <input type="email" class="form-vanta-control" id="email" placeholder="e.g. arthur@example.com" required>
+                    <div class="invalid-feedback">Please provide a valid email.</div>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6 form-vanta-group">
+                    <label for="phone" class="form-vanta-label">Phone Number *</label>
+                    <input type="tel" class="form-vanta-control" id="phone" placeholder="e.g. +44 7700 900077" required>
+                    <div class="invalid-feedback">Please provide a contact number.</div>
+                  </div>
+
+                  <div class="col-md-6 form-vanta-group">
+                    <label for="locationPostcode" class="form-vanta-label">Location / Postcode *</label>
+                    <input type="text" class="form-vanta-control" id="locationPostcode" placeholder="e.g. SW1X 7XL, Kensington" required>
+                    <div class="invalid-feedback">Please enter your location or postcode.</div>
+                  </div>
+                </div>
+
+                <!-- Vehicle Info Row -->
+                <div class="p-3 mb-4 rounded-3" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle);">
+                  <span class="text-white d-block small font-monospace text-uppercase mb-3" style="color: var(--accent-champagne);">Vehicle Information</span>
+                  <div class="row g-3">
+                    <div class="col-md-4 form-vanta-group mb-0">
+                      <label for="vehicleMake" class="form-vanta-label">Make *</label>
+                      <input type="text" class="form-vanta-control" id="vehicleMake" placeholder="e.g. Porsche / BMW" required>
+                    </div>
+                    <div class="col-md-4 form-vanta-group mb-0">
+                      <label for="vehicleModel" class="form-vanta-label">Model *</label>
+                      <input type="text" class="form-vanta-control" id="vehicleModel" placeholder="e.g. 911 GT3 / M4" required>
+                    </div>
+                    <div class="col-md-4 form-vanta-group mb-0">
+                      <label for="vehicleYear" class="form-vanta-label">Year *</label>
+                      <input type="number" class="form-vanta-control" id="vehicleYear" placeholder="e.g. 2023" min="1950" max="2027" required>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Service Selection & Scheduling -->
+                <div class="row g-3">
+                  <div class="col-md-6 form-vanta-group">
+                    <label for="serviceType" class="form-vanta-label">Select Service *</label>
+                    <select class="form-vanta-select" id="serviceType" required>
+                      <option value="" disabled selected>Choose a package...</option>
+                      <option value="Full Detail (Interior & Exterior)">Full Detail (Interior & Exterior)</option>
+                      <option value="Exterior Detail">Exterior Detail</option>
+                      <option value="Interior Detail">Interior Detail</option>
+                      <option value="Paint Protection & Ceramic Coating">Paint Protection & Ceramic Coating (9H)</option>
+                      <option value="Custom Bespoke Detail">Custom / Multi-Vehicle Fleet Detail</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a service package.</div>
+                  </div>
+
+                  <div class="col-md-6 form-vanta-group">
+                    <label for="bookingDate" class="form-vanta-label">Preferred Date *</label>
+                    <input type="date" class="form-vanta-control" id="bookingDate" required>
+                    <div class="invalid-feedback">Please select a preferred date.</div>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-12 form-vanta-group">
+                    <label for="bookingTime" class="form-vanta-label">Preferred Time Slot *</label>
+                    <select class="form-vanta-select" id="bookingTime" required>
+                      <option value="Morning Slot (08:00 - 12:00)">Morning Slot (08:00 - 12:00)</option>
+                      <option value="Afternoon Slot (12:00 - 16:00)">Afternoon Slot (12:00 - 16:00)</option>
+                      <option value="Late Afternoon Slot (16:00 - 19:00)">Late Afternoon Slot (16:00 - 19:00)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-vanta-group">
+                  <label for="additionalDetails" class="form-vanta-label">Additional Details / Paint Condition (Optional)</label>
+                  <textarea class="form-vanta-control" id="additionalDetails" rows="3" placeholder="Tell us if you have pet hair, deep scratches, swirl marks, tree sap, or specific parking access notes..."></textarea>
+                </div>
+
+                <div class="mt-4">
+                  <button type="submit" class="btn btn-vanta btn-vanta-primary w-100 py-3" id="submitBookingBtn">
+                    <i class="bi bi-send-fill"></i>
+                    <span>REQUEST A QUOTE</span>
+                  </button>
+                </div>
+
+                <div class="text-center mt-3">
+                  <span class="text-muted small">
+                    <i class="bi bi-lock-fill me-1"></i> This is a frontend demo request form. No payment or real booking processed.
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right: Contact Cards & Mobile Service Info -->
+          <div class="col-lg-4" data-aos="fade-left">
+            <!-- Contact Info Box -->
+            <div class="p-4 rounded-3 mb-4" style="background: var(--bg-card); border: 1px solid var(--border-subtle);">
+              <h3 class="h5 text-white mb-3">Direct Mobile Concierge</h3>
+              
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="trust-icon-box flex-shrink-0">
+                  <i class="bi bi-telephone-outbound"></i>
+                </div>
+                <div>
+                  <strong class="text-white d-block small">Phone / WhatsApp</strong>
+                  <span class="text-secondary small">+44 20 0000 0000</span>
+                  <span class="badge-demo d-block mt-1">Demo Hotline</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="trust-icon-box flex-shrink-0">
+                  <i class="bi bi-envelope-at"></i>
+                </div>
+                <div>
+                  <strong class="text-white d-block small">Email Inquiries</strong>
+                  <a href="mailto:hello@vantadetailing.demo" class="text-secondary small text-decoration-none">hello@vantadetailing.demo</a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="trust-icon-box flex-shrink-0">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <div>
+                  <strong class="text-white d-block small">Operating Hours</strong>
+                  <span class="text-secondary small">Monday – Sunday: 7:00 AM – 7:00 PM</span>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3">
+                <div class="trust-icon-box flex-shrink-0">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <strong class="text-white d-block small">Mobile Coverage</strong>
+                  <span class="text-secondary small">Greater London, Surrey, Milan Metro, Toronto GTA (Demo)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Self-Contained Rig Notice Box -->
+            <div class="p-4 rounded-3" style="background: rgba(229, 195, 120, 0.04); border: 1px solid var(--border-accent);">
+              <div class="d-flex align-items-center gap-2 mb-2 text-warning">
+                <i class="bi bi-lightning-charge-fill"></i>
+                <strong class="text-white small text-uppercase font-monospace">100% Self-Sufficient</strong>
+              </div>
+              <p class="text-secondary small mb-0">
+                You don't need to provide outside water hoses or electric outlets. Our vans carry ultra-pure deionized water tanks and whisper-quiet power generators.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE AREA MAP-STYLE SECTION & POSTCODE CHECKER -->
+    <section class="section-py section-bg-surface" id="serviceAreaSection">
+      <div class="container">
+        <div class="text-center section-header" data-aos="fade-up">
+          <span class="badge-label mb-2">WHERE WE TRAVEL</span>
+          <h2 class="heading-section text-white mt-2">SERVICE COVERAGE AREA</h2>
+          <p class="lead-text mx-auto" style="max-width: 600px;">
+            We provide mobile detailing directly to residential driveways, corporate parking suites, and secure private garages across premier locations.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="coverage-box">
+              <h3 class="h5 text-white mb-3">Coverage Hubs (Demo)</h3>
+              <p class="text-secondary small mb-4">
+                Our fleet of mobile detailing units covers a wide radius across high-value markets with zero hidden travel surcharges:
+              </p>
+              
+              <div class="d-flex flex-wrap mb-4">
+                <span class="coverage-pill"><i class="bi bi-geo-fill"></i> Mayfair & Knightsbridge</span>
+                <span class="coverage-pill"><i class="bi bi-geo-fill"></i> Kensington & Chelsea</span>
+                <span class="coverage-pill"><i class="bi bi-geo-fill"></i> Richmond & Wimbledon</span>
+                <span class="coverage-pill"><i class="bi bi-geo-fill"></i> Canary Wharf & City</span>
+                <span class="coverage-pill"><i class="bi bi-geo-fill"></i> Surrey & Berkshire</span>
+                <span class="coverage-pill"><i class="bi bi-geo-fill"></i> Milan Metro & Brianza</span>
+                <span class="coverage-pill"><i class="bi bi-geo-fill"></i> Downtown Toronto & Yorkville</span>
+                <span class="coverage-pill"><i class="bi bi-geo-fill"></i> Greater Vancouver</span>
+              </div>
+
+              <!-- Quick Coverage Checker -->
+              <label for="coverageSearchInput" class="form-vanta-label">Check Your Postcode / City</label>
+              <div class="input-group">
+                <input type="text" id="coverageSearchInput" class="form-vanta-control" placeholder="Enter postcode or area (e.g. W1K, SW3, Milan)...">
+                <button class="btn btn-vanta btn-vanta-primary" type="button" id="coverageSearchBtn">
+                  <i class="bi bi-search"></i> Check
+                </button>
+              </div>
+              <div id="coverageSearchResult"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <!-- Stylized Map Graphic Box -->
+            <div class="p-4 rounded-3 position-relative overflow-hidden" style="background: #0d1017; border: 1px solid var(--border-subtle); aspect-ratio: 16 / 10; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+              <!-- Radar Pulse Graphic -->
+              <div style="position: absolute; width: 220px; height: 220px; border: 1px dashed rgba(229,195,120,0.3); border-radius: 50%; animation: spinRadar 20s linear infinite;"></div>
+              <div style="position: absolute; width: 140px; height: 140px; border: 1px solid rgba(229,195,120,0.4); border-radius: 50%;"></div>
+              
+              <div class="position-relative z-2">
+                <i class="bi bi-broadcast text-warning fs-1 mb-2"></i>
+                <h3 class="h5 text-white mb-1">Mobile Unit On Standby</h3>
+                <span class="badge-demo mb-2">Active Service Radar (Demo)</span>
+                <p class="text-secondary small mx-auto mb-0" style="max-width: 320px;">
+                  Our detailing vans operate 7 days a week with rapid response dispatch.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="section-py section-bg-dark" id="faqSection">
+      <div class="container">
+        <div class="text-center section-header" data-aos="fade-up">
+          <span class="badge-label mb-2">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="heading-section text-white mt-2">COMMON QUESTIONS</h2>
+          <p class="lead-text mx-auto" style="max-width: 600px;">
+            Everything you need to know about our mobile detailing process.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9" data-aos="fade-up" data-aos-delay="100">
+            <div class="accordion accordion-vanta" id="faqAccordion">
+
+              <!-- FAQ 1 -->
+              <div class="accordion-item" id="faqItem1">
+                <h3 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How long does a detail take?
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Duration depends on the service package and vehicle condition. A standard Exterior or Interior Detail typically takes 1.5 to 2.5 hours. A comprehensive Full Detail takes 3.5 to 5 hours. Multi-stage Paint Correction and 9H Ceramic Coating packages require a full day or 2 consecutive days for thorough cure time.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div class="accordion-item" id="faqItem2">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Do you come directly to the customer's location?
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes, exactly. We are a 100% mobile concierge detailing service. We can detail your vehicle in your residential driveway, parking bay, office car park, or private storage facility. All we require is enough clearance around the vehicle to work safely.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div class="accordion-item" id="faqItem3">
+                <h3 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Do you require water or electricity hookups?
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    No! Our mobile vans are completely self-sufficient. We carry our own onboard deionized pure water (0 TDS) tank and whisper-quiet power inverter generators. If external power is readily available we may plug in, but it is never mandatory.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div class="accordion-item" id="faqItem4">
+                <h3 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What vehicles do you detail?
+                  </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    We cater to daily drivers, executive saloons, SUVs, supercars, classic and collector automobiles, high-performance sports cars, and luxury commercial vans. Every vehicle receives the same exacting care.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div class="accordion-item" id="faqItem5">
+                <h3 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How do I get an accurate quote?
+                  </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Simply fill out the booking form on this page with your vehicle model and requested package. We will review your details and confirm the appointment with a fixed, upfront quote. You can also mention any specific concerns (e.g. heavy pet hair, deep paint swirls, odor) for precise estimates.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 6 -->
+              <div class="accordion-item" id="faqItem6">
+                <h3 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Do you offer maintenance detailing programs?
+                  </button>
+                </h3>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes. Following an initial Full Detail or Ceramic Coating, clients can enroll in our bi-weekly or monthly Maintenance Care program to preserve their vehicle in immaculate condition year-round at preferential rates.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- BOOKING CONFIRMATION MODAL -->
+  <div class="modal fade modal-vanta" id="bookingConfirmationModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title h5 text-white d-flex align-items-center gap-2" id="modalLabel">
+            <i class="bi bi-check-circle-fill text-success"></i>
+            Quote Request Received
+          </h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <div class="mb-3">
+            <i class="bi bi-shield-check" style="font-size: 3rem; color: var(--accent-champagne);"></i>
+          </div>
+          <h4 class="text-white mb-2">Thanks! Your request has been received.</h4>
+          <p class="text-secondary small mb-3">
+            This is a <strong>demo booking confirmation</strong>. In a live production environment, our concierge team would contact you shortly to confirm your scheduled slot.
+          </p>
+
+          <div id="bookingSummaryDetails"></div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-vanta btn-vanta-primary" data-bs-dismiss="modal">
+            <span>CLOSE DEMO PREVIEW</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-vanta" id="siteFooter">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-vanta mb-3 d-inline-block" href="index.html">
+            <span class="navbar-brand-title">
+              <i class="bi bi-shield-shaded" style="color: var(--accent-champagne);"></i>
+              VANTA DETAILING
+            </span>
+            <span class="navbar-brand-tagline">Premium Mobile Car Care</span>
+          </a>
+          <p class="text-secondary small pe-lg-4 mb-4">
+            Master-grade mobile vehicle detailing, multi-stage paint correction, and ceramic protection delivered directly to your driveway or workspace.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://tiktok.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h3 class="footer-title">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact & Booking</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#exteriorDetail">Exterior Detail</a></li>
+            <li><a href="services.html#interiorDetail">Interior Detail</a></li>
+            <li><a href="services.html#fullDetail">Full Detail Package</a></li>
+            <li><a href="services.html#paintProtection">Paint & Ceramic Coat</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-title">Mobile Concierge</h3>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone text-warning"></i>
+              <span>+44 20 0000 0000 <span class="badge-demo">Demo</span></span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope text-warning"></i>
+              <span>hello@vantadetailing.demo</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-clock text-warning"></i>
+              <span>Mon – Sun: 7:00 AM – 7:00 PM</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt text-warning"></i>
+              <span>London • Milan • Toronto (Demo)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-center text-md-start">
+        <div>© 2026 VANTA DETAILING — Demo Website. All rights reserved.</div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="footer-country-badge">UK</span>
+          <span class="footer-country-badge">CA</span>
+          <span class="footer-country-badge">IT</span>
+        </div>
+        <div><span class="badge-demo">Demonstration Portfolio Project</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+  </script>
+
+  <!-- Custom Main JS -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

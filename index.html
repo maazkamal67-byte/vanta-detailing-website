@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VANTA DETAILING | Premium Mobile Car Care</title>
+  <meta name="description" content="Professional mobile car detailing designed to restore, protect, and maintain your vehicle at your home or workplace. Dark luxury automotive care.">
+  <meta property="og:title" content="VANTA DETAILING | Premium Mobile Car Care">
+  <meta property="og:description" content="Professional mobile detailing designed to restore, protect, and maintain your vehicle wherever you are.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Dark Luxury Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-vanta" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-vanta" href="index.html" id="navBrand">
+          <span class="navbar-brand-title">
+            <i class="bi bi-shield-shaded" style="color: var(--accent-champagne); font-size: 1.25rem;"></i>
+            VANTA DETAILING
+          </span>
+          <span class="navbar-brand-tagline">Premium Mobile Car Care</span>
+        </a>
+
+        <button class="navbar-toggler border-0 text-white p-2" type="button" data-bs-toggle="collapse" data-bs-target="#vantaNavCollapse" aria-controls="vantaNavCollapse" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggleBtn">
+          <i class="bi bi-list fs-2" style="color: var(--accent-champagne);"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="vantaNavCollapse">
+          <ul class="navbar-nav align-items-lg-center gap-lg-1 my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="index.html" id="navLinkHome">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="services.html" id="navLinkServices">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="about.html" id="navLinkAbout">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="contact.html" id="navLinkContact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-vanta btn-vanta-primary w-100" href="contact.html" id="navCtaBtn">
+                <span>BOOK A DETAIL</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <!-- HERO SECTION -->
+    <section class="hero-vanta" id="heroSection">
+      <div class="hero-bg-wrapper">
+        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=2070&auto=format&fit=crop" 
+             alt="Luxury Porsche 911 GT3 in dark studio detailing finish" 
+             class="hero-bg-img" 
+             loading="eager">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content text-center text-lg-start">
+        <div class="row align-items-center">
+          <div class="col-lg-9 col-xl-8" data-aos="fade-up" data-aos-duration="1000">
+            <div class="mb-3 d-flex flex-wrap align-items-center gap-2">
+              <span class="badge-label">
+                <span class="hero-divider-line"></span>
+                PREMIUM MOBILE CAR CARE
+              </span>
+              <span class="badge-live-pulse">
+                <span class="live-dot"></span>
+                MOBILE LIVE
+              </span>
+            </div>
+            
+            <h1 class="heading-hero mb-3 text-white">
+              YOUR CAR.<br>
+              <span style="color: var(--accent-champagne);">OUR CRAFT.</span>
+            </h1>
+
+            <p class="lead-text mb-4 pe-lg-5" style="max-width: 620px;">
+              Professional mobile detailing designed to restore, protect and maintain your vehicle wherever you are. Equipped with self-contained DI pure water and electrical systems.
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row gap-3 pt-2 justify-content-center justify-content-lg-start">
+              <a href="contact.html" class="btn btn-vanta btn-vanta-primary" id="heroPrimaryCta">
+                <i class="bi bi-calendar-check"></i>
+                <span>BOOK A DETAIL</span>
+              </a>
+              <a href="services.html" class="btn btn-vanta btn-vanta-secondary" id="heroSecondaryCta">
+                <span>EXPLORE SERVICES</span>
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+
+            <div class="mt-4 pt-3 d-flex align-items-center gap-3 justify-content-center justify-content-lg-start">
+              <div class="d-flex text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill ms-1"></i>
+                <i class="bi bi-star-fill ms-1"></i>
+                <i class="bi bi-star-fill ms-1"></i>
+                <i class="bi bi-star-fill ms-1"></i>
+              </div>
+              <span class="text-secondary small font-monospace">4.9 / 5 Client Rating <span class="badge-demo ms-1">Demo Showcase</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#trustBar" class="hero-scroll-indicator" aria-label="Scroll to content">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>EXPLORE</span>
+      </a>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" id="trustBar">
+      <div class="container">
+        <div class="row g-4 justify-content-between align-items-center">
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="trust-item">
+              <div class="trust-icon-box">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div>
+                <h2 class="trust-title h6">Mobile Service</h2>
+                <p class="trust-desc">At home or office</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="trust-item">
+              <div class="trust-icon-box">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div>
+                <h2 class="trust-title h6">Professional Products</h2>
+                <p class="trust-desc">Gtechniq & Rupes</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="trust-item">
+              <div class="trust-icon-box">
+                <i class="bi bi-award"></i>
+              </div>
+              <div>
+                <h2 class="trust-title h6">Experienced Detailers</h2>
+                <p class="trust-desc">Certified specialists</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="trust-item">
+              <div class="trust-icon-box">
+                <i class="bi bi-patch-check"></i>
+              </div>
+              <div>
+                <h2 class="trust-title h6">Satisfaction Focused</h2>
+                <p class="trust-desc">Uncompromising finish</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO SPLIT SECTION -->
+    <section class="section-py section-bg-dark" id="introSection">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="badge-label mb-3">CONVENIENCE MEETS EXCELLENCE</span>
+            <h2 class="heading-section text-white mb-4">
+              DETAILING THAT<br>
+              <span style="color: var(--accent-champagne);">COMES TO YOU.</span>
+            </h2>
+            <p class="lead-text mb-4">
+              Skip the inconvenience of waiting at detailing shops or risking scratch-prone conveyor washes. VANTA brings a master-grade detailing studio directly to your driveway, executive car park, or garage.
+            </p>
+            <p class="text-secondary mb-4">
+              Our mobile units arrive fully self-sufficient with onboard deionized spot-free water, whisper-quiet power generators, specialized warm air blowers, and precision multi-stage dual-action polishers. We treat your vehicle with the obsessive care it deserves.
+            </p>
+            <div class="pt-2">
+              <a href="about.html" class="btn btn-vanta btn-vanta-outline-gold" id="introAboutBtn">
+                <span>ABOUT VANTA</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="split-image-container">
+              <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=1200&auto=format&fit=crop" 
+                   alt="Master detailer performing machine paint correction under specialized LED inspection light" 
+                   class="img-fluid rounded"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="section-py section-bg-surface" id="servicesPreview">
+      <div class="container">
+        <div class="text-center section-header" data-aos="fade-up">
+          <span class="badge-label mb-2">PRECISION PACKAGES</span>
+          <h2 class="heading-section text-white mt-2">OUR DETAILING SERVICES</h2>
+          <p class="lead-text mx-auto" style="max-width: 600px;">
+            Engineered treatments tailored to restore factory brilliance and protect your automotive investment.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- 1. Exterior Detail -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="vanta-card" id="cardExterior">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=800&auto=format&fit=crop" 
+                     alt="Exterior foam wash and hand detailing" 
+                     loading="lazy">
+                <span class="badge-demo card-badge-top">Starting from £95*</span>
+              </div>
+              <div class="card-body-vanta">
+                <h3 class="card-title-vanta">Exterior Detail</h3>
+                <p class="card-text-vanta">
+                  Hand wash, wheels, tyres, drying and finishing to restore spotless road presence.
+                </p>
+                <ul class="card-features-list">
+                  <li><i class="bi bi-check2"></i> pH-neutral snow foam</li>
+                  <li><i class="bi bi-check2"></i> Deep wheel & arch scrub</li>
+                  <li><i class="bi bi-check2"></i> Streak-free hydrophobic dry</li>
+                </ul>
+                <a href="services.html#exteriorDetail" class="btn btn-vanta btn-vanta-secondary btn-sm mt-auto w-100">
+                  <span>LEARN MORE</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Interior Detail -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="vanta-card" id="cardInterior">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=800&auto=format&fit=crop" 
+                     alt="Interior cabin cockpit leather cleaning and conditioning" 
+                     loading="lazy">
+                <span class="badge-demo card-badge-top">Starting from £120*</span>
+              </div>
+              <div class="card-body-vanta">
+                <h3 class="card-title-vanta">Interior Detail</h3>
+                <p class="card-text-vanta">
+                  Deep interior cleaning, thorough vacuuming and bespoke surface conditioning.
+                </p>
+                <ul class="card-features-list">
+                  <li><i class="bi bi-check2"></i> Deep steam sanitization</li>
+                  <li><i class="bi bi-check2"></i> Leather UV feed & matte coat</li>
+                  <li><i class="bi bi-check2"></i> Odor & allergen scrub</li>
+                </ul>
+                <a href="services.html#interiorDetail" class="btn btn-vanta btn-vanta-secondary btn-sm mt-auto w-100">
+                  <span>LEARN MORE</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Full Detail -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="vanta-card" id="cardFull">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" 
+                     alt="Complete luxury full detailing transformation" 
+                     loading="lazy">
+                <span class="badge-demo card-badge-top">Most Popular</span>
+              </div>
+              <div class="card-body-vanta">
+                <h3 class="card-title-vanta">Full Detail</h3>
+                <p class="card-text-vanta">
+                  Complete interior and exterior transformation for complete revitalisation.
+                </p>
+                <ul class="card-features-list">
+                  <li><i class="bi bi-check2"></i> Full exterior 2-bucket wash</li>
+                  <li><i class="bi bi-check2"></i> Comprehensive cabin overhaul</li>
+                  <li><i class="bi bi-check2"></i> Paint gloss sealant finish</li>
+                </ul>
+                <a href="services.html#fullDetail" class="btn btn-vanta btn-vanta-secondary btn-sm mt-auto w-100">
+                  <span>LEARN MORE</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Paint Protection -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="vanta-card" id="cardCeramic">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=800&auto=format&fit=crop" 
+                     alt="Ceramic coating water beading and gloss enhancement" 
+                     loading="lazy">
+                <span class="badge-demo card-badge-top">Long-Term Shield</span>
+              </div>
+              <div class="card-body-vanta">
+                <h3 class="card-title-vanta">Paint Protection</h3>
+                <p class="card-text-vanta">
+                  Protection-focused treatments designed to preserve your vehicle's finish.
+                </p>
+                <ul class="card-features-list">
+                  <li><i class="bi bi-check2"></i> 1 or 2 stage machine polish</li>
+                  <li><i class="bi bi-check2"></i> Ceramic 9H hydrophobic coat</li>
+                  <li><i class="bi bi-check2"></i> Up to 3-5 years protection</li>
+                </ul>
+                <a href="services.html#paintProtection" class="btn btn-vanta btn-vanta-secondary btn-sm mt-auto w-100">
+                  <span>LEARN MORE</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="services.html" class="btn btn-vanta btn-vanta-outline-gold" id="viewAllServicesBtn">
+            <span>VIEW FULL SERVICE MENU & ESTIMATOR</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER INTERACTIVE SLIDER -->
+    <section class="section-py section-bg-dark" id="beforeAfterSection">
+      <div class="container">
+        <div class="text-center section-header" data-aos="fade-up">
+          <span class="badge-label mb-2">PROVEN RESULTS</span>
+          <h2 class="heading-section text-white mt-2">SEE THE DIFFERENCE.</h2>
+          <p class="lead-text mx-auto" style="max-width: 600px;">
+            Professional detailing is more than a clean car. It's the difference you can see. Drag the slider to witness our paint correction in action.
+          </p>
+        </div>
+
+        <!-- Interactive Slider Box -->
+        <div class="before-after-container" id="beforeAfterSlider" data-aos="zoom-in" data-aos-duration="800">
+          <!-- After Image (Background) -->
+          <div class="before-after-img-wrap after-img-wrap">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1600&auto=format&fit=crop" 
+                 alt="After Detailing - Glossy mirror ceramic finish" 
+                 loading="lazy">
+            <span class="ba-tag ba-tag-after">AFTER VANTA DETAIL</span>
+          </div>
+
+          <!-- Before Image (Clipped Overlay) -->
+          <div class="before-after-img-wrap before-img-wrap">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1600&auto=format&fit=crop" 
+                 alt="Before Detailing - Swirled uncorrected paint" 
+                 loading="lazy">
+            <span class="ba-tag ba-tag-before">BEFORE DETAIL</span>
+          </div>
+
+          <!-- Slider Handle -->
+          <div class="ba-slider-handle" aria-label="Drag to compare before and after images">
+            <div class="ba-handle-button">
+              <i class="bi bi-arrow-left-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <p class="text-muted small">
+            <i class="bi bi-hand-index-thumb me-1"></i> Drag or tap anywhere on the image above to compare before and after transformation
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-STEP PROCESS -->
+    <section class="section-py section-bg-surface" id="processSection">
+      <div class="container">
+        <div class="text-center section-header" data-aos="fade-up">
+          <span class="badge-label mb-2">HOW IT WORKS</span>
+          <h2 class="heading-section text-white mt-2">SEAMLESS 3-STEP PROCESS</h2>
+          <p class="lead-text mx-auto" style="max-width: 600px;">
+            Enjoy luxury vehicle care without altering your schedule.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="process-step-card" id="step1">
+              <div class="process-num">
+                <span>01</span>
+                <i class="bi bi-calendar-event fs-3 text-secondary"></i>
+              </div>
+              <h3 class="process-step-title">BOOK</h3>
+              <p class="process-step-desc">
+                Choose your desired service package, preferred date, and share your location in under 2 minutes.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="process-step-card" id="step2">
+              <div class="process-num">
+                <span>02</span>
+                <i class="bi bi-truck fs-3 text-secondary"></i>
+              </div>
+              <h3 class="process-step-title">WE DETAIL</h3>
+              <p class="process-step-desc">
+                Our fully-equipped mobile unit arrives at your home or workplace with power, water, and master tools.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-step-card" id="step3">
+              <div class="process-num">
+                <span>03</span>
+                <i class="bi bi-key fs-3 text-secondary"></i>
+              </div>
+              <h3 class="process-step-title">DRIVE AWAY</h3>
+              <p class="process-step-desc">
+                Inspect the flawless finish with our detailer and enjoy a cleaner, refreshed and protected vehicle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MASONRY GALLERY -->
+    <section class="section-py section-bg-dark" id="gallerySection">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4" data-aos="fade-up">
+          <div>
+            <span class="badge-label mb-2">PORTFOLIO OF CRAFT</span>
+            <h2 class="heading-section text-white mt-2">RECENT VEHICLES</h2>
+          </div>
+          
+          <!-- Gallery Filter Tabs -->
+          <div class="mt-3 mt-md-0 d-flex flex-wrap gap-2">
+            <button class="option-pill-btn gallery-filter-btn active" data-filter="all">All Showcase</button>
+            <button class="option-pill-btn gallery-filter-btn" data-filter="exterior">Exterior</button>
+            <button class="option-pill-btn gallery-filter-btn" data-filter="interior">Interior</button>
+            <button class="option-pill-btn gallery-filter-btn" data-filter="ceramic">Paint & Ceramic</button>
+          </div>
+        </div>
+
+        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-item" data-category="ceramic" id="gallery1">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=800&auto=format&fit=crop" alt="Ceramic paint protection gloss reflections" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-category">Paint Protection</span>
+              <h3 class="gallery-title">Porsche 911 GT3 Ceramic 9H</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="interior" id="gallery2">
+            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=800&auto=format&fit=crop" alt="Bespoke leather interior detail" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-category">Interior Detail</span>
+              <h3 class="gallery-title">Range Rover Autobiography Leather Feed</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="exterior" id="gallery3">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=800&auto=format&fit=crop" alt="Snow foam decontamination wash" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-category">Exterior Detail</span>
+              <h3 class="gallery-title">BMW M3 Multi-Stage Snow Foam</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="ceramic" id="gallery4">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=800&auto=format&fit=crop" alt="Dual-action machine polishing in progress" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-category">Paint Correction</span>
+              <h3 class="gallery-title">Aston Martin DB11 2-Stage Polish</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="exterior" id="gallery5">
+            <img src="https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?q=80&w=800&auto=format&fit=crop" alt="Wheel barrel and brake caliper detailing" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-category">Wheels & Trim</span>
+              <h3 class="gallery-title">Forged Satin Alloys & Caliper Seal</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="interior" id="gallery6">
+            <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=800&auto=format&fit=crop" alt="Alcantara steering wheel and carbon fiber detail" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-category">Interior Detail</span>
+              <h3 class="gallery-title">Mercedes-AMG GT Carbon Cockpit</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-py section-bg-surface" id="testimonialsSection">
+      <div class="container">
+        <div class="text-center section-header" data-aos="fade-up">
+          <span class="badge-label mb-2">CLIENT EXPERIENCES</span>
+          <h2 class="heading-section text-white mt-2">TESTIMONIALS</h2>
+          <p class="lead-text mx-auto" style="max-width: 600px;">
+            Trusted by discerning owners across the UK, Canada, and Europe.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card" id="testimonial1">
+              <div>
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "Having VANTA come directly to my home was a game changer. The attention to detail on my Porsche 911 paintwork was extraordinary — virtually all swirl marks are gone."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">DR</div>
+                <div>
+                  <div class="author-name">Daniel R.</div>
+                  <div class="author-car">Porsche 911 Owner • London</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card" id="testimonial2">
+              <div>
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "The interior deep clean brought our Range Rover back to showroom delivery condition. Clean, punctual, fully self-contained, and polite. Highly recommended."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">SM</div>
+                <div>
+                  <div class="author-name">Sophie M.</div>
+                  <div class="author-car">Range Rover Autobiography • Surrey</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card" id="testimonial3">
+              <div>
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "The ceramic coating finish on my M3 Competition is breathtaking. Rain literally bounces off the paint now. Worth every penny for true master mobile car care."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">JT</div>
+                <div>
+                  <div class="author-name">James T.</div>
+                  <div class="author-car">BMW M3 Competition • Milan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <span class="badge-demo">Demo client feedback showcases illustrative detailing experiences</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CINEMATIC CTA -->
+    <section class="section-py position-relative overflow-hidden text-center text-white" id="finalCtaSection" style="background: #060709;">
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="opacity: 0.15;">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop" 
+             alt="Luxury vehicle finish background" 
+             class="w-100 h-100 object-fit-cover">
+      </div>
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at center, transparent 20%, #060709 90%);"></div>
+
+      <div class="container position-relative z-2" data-aos="fade-up">
+        <span class="badge-label mb-3">CONCIERGE DETAILING AT YOUR DOOR</span>
+        <h2 class="heading-section mb-3">READY TO BRING YOUR CAR BACK TO LIFE?</h2>
+        <p class="lead-text mx-auto mb-4" style="max-width: 580px;">
+          Book professional mobile detailing at a time and place that works for you. No queues, no hassle, only pristine results.
+        </p>
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center pt-2">
+          <a href="contact.html" class="btn btn-vanta btn-vanta-primary" id="finalCtaQuoteBtn">
+            <i class="bi bi-send-check"></i>
+            <span>REQUEST A QUOTE</span>
+          </a>
+          <a href="services.html" class="btn btn-vanta btn-vanta-secondary" id="finalCtaExploreBtn">
+            <span>VIEW PRICING & OPTIONS</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-vanta" id="siteFooter">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-vanta mb-3 d-inline-block" href="index.html">
+            <span class="navbar-brand-title">
+              <i class="bi bi-shield-shaded" style="color: var(--accent-champagne);"></i>
+              VANTA DETAILING
+            </span>
+            <span class="navbar-brand-tagline">Premium Mobile Car Care</span>
+          </a>
+          <p class="text-secondary small pe-lg-4 mb-4">
+            Master-grade mobile vehicle detailing, multi-stage paint correction, and ceramic protection delivered directly to your driveway or workspace.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://tiktok.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="col-lg-2 col-6">
+          <h3 class="footer-title">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact & Booking</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-6">
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#exteriorDetail">Exterior Detail</a></li>
+            <li><a href="services.html#interiorDetail">Interior Detail</a></li>
+            <li><a href="services.html#fullDetail">Full Detail Package</a></li>
+            <li><a href="services.html#paintProtection">Paint & Ceramic Coat</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Demo Info -->
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-title">Mobile Concierge</h3>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone text-warning"></i>
+              <span>+44 20 0000 0000 <span class="badge-demo">Demo</span></span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope text-warning"></i>
+              <span>hello@vantadetailing.demo</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-clock text-warning"></i>
+              <span>Mon – Sun: 7:00 AM – 7:00 PM</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt text-warning"></i>
+              <span>London • Milan • Toronto (Demo)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Credits -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-center text-md-start">
+        <div>
+          © 2026 VANTA DETAILING — Demo Website. All rights reserved.
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="footer-country-badge">UK</span>
+          <span class="footer-country-badge">CA</span>
+          <span class="footer-country-badge">IT</span>
+        </div>
+        <div>
+          <span class="badge-demo">Demonstration Portfolio Project</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50
+    });
+  </script>
+
+  <!-- Custom Main JS -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

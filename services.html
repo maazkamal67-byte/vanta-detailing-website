@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detailing Services | VANTA DETAILING</title>
+  <meta name="description" content="Explore our bespoke mobile vehicle detailing packages: Exterior hand care, interior rejuvenation, full transformation, and 9H ceramic paint protection.">
+  <meta property="og:title" content="Detailing Services | VANTA DETAILING">
+  <meta property="og:description" content="Professional care for every part of your vehicle delivered to your doorstep.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Dark Luxury Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-vanta" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-vanta" href="index.html" id="navBrand">
+          <span class="navbar-brand-title">
+            <i class="bi bi-shield-shaded" style="color: var(--accent-champagne); font-size: 1.25rem;"></i>
+            VANTA DETAILING
+          </span>
+          <span class="navbar-brand-tagline">Premium Mobile Car Care</span>
+        </a>
+
+        <button class="navbar-toggler border-0 text-white p-2" type="button" data-bs-toggle="collapse" data-bs-target="#vantaNavCollapse" aria-controls="vantaNavCollapse" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggleBtn">
+          <i class="bi bi-list fs-2" style="color: var(--accent-champagne);"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="vantaNavCollapse">
+          <ul class="navbar-nav align-items-lg-center gap-lg-1 my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="index.html" id="navLinkHome">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="services.html" id="navLinkServices">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="about.html" id="navLinkAbout">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-vanta" href="contact.html" id="navLinkContact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-vanta btn-vanta-primary w-100" href="contact.html" id="navCtaBtn">
+                <span>BOOK A DETAIL</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <!-- SUBPAGE HERO -->
+    <section class="subpage-hero text-center" id="servicesHero">
+      <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2000&auto=format&fit=crop" 
+           alt="Luxury sports car detailing services background" 
+           class="subpage-hero-bg">
+      <div class="subpage-hero-overlay"></div>
+
+      <div class="container subpage-hero-content" data-aos="fade-up">
+        <span class="badge-label mb-3">CONCIERGE DETAILING PACKAGES</span>
+        <h1 class="heading-hero text-white mb-3">DETAILING SERVICES</h1>
+        <p class="lead-text mx-auto" style="max-width: 650px;">
+          Professional care for every part of your vehicle. Every package is carried out using scratch-free techniques, deionized pure water, and industry-leading formulations.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRICING ESTIMATOR WIDGET INTERACTIVE -->
+    <section class="section-py section-bg-dark pt-5" id="estimatorSection">
+      <div class="container">
+        <div class="estimator-card" id="priceEstimatorWidget" data-aos="fade-up">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <span class="badge-label mb-2">INTERACTIVE ESTIMATOR</span>
+              <h2 class="h3 text-white mb-3">Select Vehicle & Package</h2>
+              
+              <!-- Vehicle Selector -->
+              <div class="mb-4">
+                <label class="form-vanta-label">1. Choose Vehicle Class</label>
+                <div class="option-btn-group">
+                  <button class="option-pill-btn vehicle-pill active" data-vehicle="sedan">
+                    <i class="bi bi-car-front me-1"></i> Sedan / Coupe
+                  </button>
+                  <button class="option-pill-btn vehicle-pill" data-vehicle="suv">
+                    <i class="bi bi-truck me-1"></i> SUV / Estate
+                  </button>
+                  <button class="option-pill-btn vehicle-pill" data-vehicle="supercar">
+                    <i class="bi bi-speedometer2 me-1"></i> Supercar / Luxury
+                  </button>
+                  <button class="option-pill-btn vehicle-pill" data-vehicle="large">
+                    <i class="bi bi-shield-shaded me-1"></i> Large 4x4 / Van
+                  </button>
+                </div>
+              </div>
+
+              <!-- Service Selector -->
+              <div>
+                <label class="form-vanta-label">2. Select Detailing Level</label>
+                <div class="option-btn-group">
+                  <button class="option-pill-btn service-pill" data-service="exterior">Exterior Detail</button>
+                  <button class="option-pill-btn service-pill" data-service="interior">Interior Detail</button>
+                  <button class="option-pill-btn service-pill active" data-service="full">Full Detail</button>
+                  <button class="option-pill-btn service-pill" data-service="ceramic">Ceramic Paint Protection</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Estimate Output Box -->
+            <div class="col-lg-5">
+              <div class="p-4 rounded-3 text-center" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-accent);">
+                <span class="text-secondary small font-monospace text-uppercase">Demo Estimated Price</span>
+                <div class="stat-number my-2" id="estimatedPrice" style="color: var(--accent-champagne);">£195 / $250</div>
+                <div class="text-muted small mb-3">
+                  <i class="bi bi-clock me-1"></i> Typical Duration: <strong class="text-white" id="estimatedTime">3.5 - 4.5 Hours</strong>
+                </div>
+                <a href="contact.html?service=full-detail&vehicle=sedan" class="btn btn-vanta btn-vanta-primary w-100" id="estimatorBookBtn">
+                  <span>BOOK THIS PACKAGE</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-3">
+          <p class="text-muted small mb-0">
+            <i class="bi bi-info-circle me-1"></i> <strong>Pricing may vary depending on vehicle size and condition. Contact us for an accurate quote.</strong> (Demo pricing for illustrative purpose).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILED SERVICE BREAKDOWN SECTIONS -->
+    <section class="section-py section-bg-surface" id="detailedServices">
+      <div class="container">
+
+        <!-- 1. Exterior Detail -->
+        <div class="row align-items-center g-5 mb-5 pb-5 border-bottom border-secondary border-opacity-10" id="exteriorDetail" data-aos="fade-up">
+          <div class="col-lg-6 order-lg-2">
+            <div class="split-image-container">
+              <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=1200&auto=format&fit=crop" 
+                   alt="Multi-stage exterior foam decontamination wash" 
+                   loading="lazy">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <span class="badge-label mb-2">EXTERIOR EXCELLENCE</span>
+            <h2 class="heading-section text-white mb-3">Exterior Detail</h2>
+            <p class="lead-text mb-4">
+              A comprehensive restorative wash using multi-stage contact methods to safely lift road grime, brake dust, and environmental contamination without inflicting swirl marks.
+            </p>
+            
+            <h3 class="h6 text-white text-uppercase tracking-wider mb-3" style="color: var(--accent-champagne);">What's Included:</h3>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Hand Wash</strong>
+                    <span class="text-secondary small">pH-neutral snow foam & 2-bucket grit guard method</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Wheel Cleaning</strong>
+                    <span class="text-secondary small">Acid-free deep barrel, caliper & arch cleanse</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Tyre Treatment</strong>
+                    <span class="text-secondary small">Satin non-sling dressing with UV inhibitors</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Drying & Finish</strong>
+                    <span class="text-secondary small">Heated filtered air blow & plush microfibre towel</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Exterior Finish</strong>
+                    <span class="text-secondary small">Hydrophobic spray sealant & crystal glass shine</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Door Shuts & Grilles</strong>
+                    <span class="text-secondary small">Detailed brush agitation & jamb wipe</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              <a href="contact.html?service=exterior-detail" class="btn btn-vanta btn-vanta-primary">
+                <span>REQUEST A QUOTE</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <span class="text-secondary small font-monospace">Starting from £95* (Demo)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Interior Detail -->
+        <div class="row align-items-center g-5 mb-5 pb-5 border-bottom border-secondary border-opacity-10" id="interiorDetail" data-aos="fade-up">
+          <div class="col-lg-6">
+            <div class="split-image-container">
+              <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=1200&auto=format&fit=crop" 
+                   alt="Interior cabin leather upholstery cleaning and steam treatment" 
+                   loading="lazy">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="badge-label mb-2">CABIN REJUVENATION</span>
+            <h2 class="heading-section text-white mb-3">Interior Detail</h2>
+            <p class="lead-text mb-4">
+              Return your vehicle's interior to a factory-fresh, hygienic state. We thoroughly deep-clean surfaces, extract carpets, sanitize vents, and condition leather upholstery.
+            </p>
+            
+            <h3 class="h6 text-white text-uppercase tracking-wider mb-3" style="color: var(--accent-champagne);">What's Included:</h3>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Deep Vacuuming</strong>
+                    <span class="text-secondary small">Carpets, seats, boot compartment & crevices</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Dashboard & Console</strong>
+                    <span class="text-secondary small">Delicate switchgear, vents & screen safe cleaning</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Interior Surface Treatment</strong>
+                    <span class="text-secondary small">OEM matte satin UV nourishment (non-greasy)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Glass Cleaning</strong>
+                    <span class="text-secondary small">Streak-free interior optical glass clarity</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Fabric Care & Leather</strong>
+                    <span class="text-secondary small">Shampoo extraction & gentle leather conditioning</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Steam Sanitation</strong>
+                    <span class="text-secondary small">Bacteria, virus & odor elimination</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              <a href="contact.html?service=interior-detail" class="btn btn-vanta btn-vanta-primary">
+                <span>REQUEST A QUOTE</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <span class="text-secondary small font-monospace">Starting from £120* (Demo)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Full Detail -->
+        <div class="row align-items-center g-5 mb-5 pb-5 border-bottom border-secondary border-opacity-10" id="fullDetail" data-aos="fade-up">
+          <div class="col-lg-6 order-lg-2">
+            <div class="split-image-container">
+              <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1200&auto=format&fit=crop" 
+                   alt="Full interior and exterior detailing complete transformation" 
+                   loading="lazy">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <span class="badge-label mb-2">COMPLETE VEHICLE OVERHAUL</span>
+            <h2 class="heading-section text-white mb-3">Full Detail</h2>
+            <p class="lead-text mb-4">
+              Our signature all-inclusive mobile service combining the full depth of our exterior meticulous wash and interior rejuvenation for the ultimate turnaround.
+            </p>
+            
+            <h3 class="h6 text-white text-uppercase tracking-wider mb-3" style="color: var(--accent-champagne);">What's Included:</h3>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Complete Interior Clean</strong>
+                    <span class="text-secondary small">Steam, leather feeding, carpet extraction</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Exterior Hand Wash</strong>
+                    <span class="text-secondary small">Multi-stage snow foam & iron fall-out remover</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Wheels & Tyres</strong>
+                    <span class="text-secondary small">Complete barrel decontamination & dressing</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Finishing Treatment</strong>
+                    <span class="text-secondary small">Ceramic-infused gloss boost & rain repellant</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Engine Bay Cosmetic Wipe</strong>
+                    <span class="text-secondary small">Careful degrease & matte dressing</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Door Jambs & Sills</strong>
+                    <span class="text-secondary small">Polished & protected against water spots</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              <a href="contact.html?service=full-detail" class="btn btn-vanta btn-vanta-primary">
+                <span>REQUEST A QUOTE</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <span class="text-secondary small font-monospace">Starting from £195* (Demo)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Paint Protection -->
+        <div class="row align-items-center g-5" id="paintProtection" data-aos="fade-up">
+          <div class="col-lg-6">
+            <div class="split-image-container">
+              <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200&auto=format&fit=crop" 
+                   alt="Hydrophobic ceramic coating paint protection water beading" 
+                   loading="lazy">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="badge-label mb-2">ULTIMATE PRESERVATION</span>
+            <h2 class="heading-section text-white mb-3">Paint Protection & Ceramic</h2>
+            <p class="lead-text mb-4">
+              Engineered to eliminate swirls, oxidation, and scratches before locking in an ultra-hard, glass-like 9H ceramic matrix that shields your clear coat for years.
+            </p>
+            
+            <h3 class="h6 text-white text-uppercase tracking-wider mb-3" style="color: var(--accent-champagne);">What's Included:</h3>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Paint Preparation</strong>
+                    <span class="text-secondary small">Full clay bar & chemical de-tar decontamination</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Machine Polish</strong>
+                    <span class="text-secondary small">1 or 2-stage dual-action swirl correction</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Protective Treatment</strong>
+                    <span class="text-secondary small">9H professional ceramic / graphene coating</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Gloss Enhancement</strong>
+                    <span class="text-secondary small">Deep wet-look reflection with intense clarity</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Long-Lasting Finish</strong>
+                    <span class="text-secondary small">3 to 5 years durability with warranty (Demo)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check-circle-fill text-warning"></i>
+                  <div>
+                    <strong class="text-white d-block small">Hydrophobic Self-Clean</strong>
+                    <span class="text-secondary small">Water, road salt & bird lime slide off effortlessly</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+              <a href="contact.html?service=paint-protection" class="btn btn-vanta btn-vanta-primary">
+                <span>REQUEST A QUOTE</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <span class="text-secondary small font-monospace">Starting from £495* (Demo)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BESPOKE ADD-ONS SECTION -->
+    <section class="section-py section-bg-dark" id="addOnsSection">
+      <div class="container">
+        <div class="text-center section-header" data-aos="fade-up">
+          <span class="badge-label mb-2">CUSTOMIZE YOUR APPOINTMENT</span>
+          <h2 class="heading-section text-white mt-2">SPECIALIST ADD-ONS</h2>
+          <p class="lead-text mx-auto" style="max-width: 600px;">
+            Target specific requirements with our specialized detailing treatments.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="vanta-card p-4">
+              <i class="bi bi-eye text-warning fs-2 mb-3"></i>
+              <h3 class="card-title-vanta h5">Headlight Restoration</h3>
+              <p class="card-text-vanta small">
+                Wet sand, polish, and ceramic seal oxidized yellow headlights back to crystal clarity.
+              </p>
+              <span class="text-muted font-monospace small">From £65*</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="vanta-card p-4">
+              <i class="bi bi-droplet-half text-warning fs-2 mb-3"></i>
+              <h3 class="card-title-vanta h5">Glass Ceramic Seal</h3>
+              <p class="card-text-vanta small">
+                High-speed hydrophobic windscreen treatment providing maximum wet-weather visibility.
+              </p>
+              <span class="text-muted font-monospace small">From £45*</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="vanta-card p-4">
+              <i class="bi bi-gear-wide-connected text-warning fs-2 mb-3"></i>
+              <h3 class="card-title-vanta h5">Engine Bay Detail</h3>
+              <p class="card-text-vanta small">
+                Delicate dry-ice/steam clean of engine plastics and metal followed by satin UV dress.
+              </p>
+              <span class="text-muted font-monospace small">From £75*</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="vanta-card p-4">
+              <i class="bi bi-shield-lock text-warning fs-2 mb-3"></i>
+              <h3 class="card-title-vanta h5">Leather Shield Coat</h3>
+              <p class="card-text-vanta small">
+                Hydrophobic breathable barrier against denim dye transfer, liquids, and friction wear.
+              </p>
+              <span class="text-muted font-monospace small">From £85*</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section-py text-center text-white" id="servicesCta" style="background: #060709;">
+      <div class="container" data-aos="fade-up">
+        <span class="badge-label mb-3">BOOK YOUR TIME SLOT</span>
+        <h2 class="heading-section mb-3">READY FOR A FLAWLESS FINISH?</h2>
+        <p class="lead-text mx-auto mb-4" style="max-width: 580px;">
+          Select your package and tell us your preferred date. We'll bring the complete detailing studio right to you.
+        </p>
+        <a href="contact.html" class="btn btn-vanta btn-vanta-primary" id="servicesBottomCta">
+          <i class="bi bi-calendar-check"></i>
+          <span>REQUEST A QUOTE</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-vanta" id="siteFooter">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-vanta mb-3 d-inline-block" href="index.html">
+            <span class="navbar-brand-title">
+              <i class="bi bi-shield-shaded" style="color: var(--accent-champagne);"></i>
+              VANTA DETAILING
+            </span>
+            <span class="navbar-brand-tagline">Premium Mobile Car Care</span>
+          </a>
+          <p class="text-secondary small pe-lg-4 mb-4">
+            Master-grade mobile vehicle detailing, multi-stage paint correction, and ceramic protection delivered directly to your driveway or workspace.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://tiktok.com" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h3 class="footer-title">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact & Booking</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h3 class="footer-title">Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#exteriorDetail">Exterior Detail</a></li>
+            <li><a href="services.html#interiorDetail">Interior Detail</a></li>
+            <li><a href="services.html#fullDetail">Full Detail Package</a></li>
+            <li><a href="services.html#paintProtection">Paint & Ceramic Coat</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h3 class="footer-title">Mobile Concierge</h3>
+          <ul class="footer-links">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone text-warning"></i>
+              <span>+44 20 0000 0000 <span class="badge-demo">Demo</span></span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope text-warning"></i>
+              <span>hello@vantadetailing.demo</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-clock text-warning"></i>
+              <span>Mon – Sun: 7:00 AM – 7:00 PM</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt text-warning"></i>
+              <span>London • Milan • Toronto (Demo)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-center text-md-start">
+        <div>© 2026 VANTA DETAILING — Demo Website. All rights reserved.</div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="footer-country-badge">UK</span>
+          <span class="footer-country-badge">CA</span>
+          <span class="footer-country-badge">IT</span>
+        </div>
+        <div><span class="badge-demo">Demonstration Portfolio Project</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+  </script>
+
+  <!-- Custom Main JS -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
