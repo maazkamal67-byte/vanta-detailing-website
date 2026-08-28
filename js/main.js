@@ -41,13 +41,17 @@ function initScrollEffects() {
 
 /* 2. Navbar active state & mobile close on click */
 function initNavbar() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const pathParts = window.location.pathname.split('/').filter(Boolean);
+  const lastPart = pathParts.length ? pathParts[pathParts.length - 1] : '';
+  const currentPath = (lastPart.endsWith('.html') ? lastPart : 'index.html').split('?')[0].split('#')[0];
   const navLinks = document.querySelectorAll('.nav-link-vanta');
 
   navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html') || (href === './' && currentPath === 'index.html')) {
+    const href = (link.getAttribute('href') || '').replace(/^\.\//, '').split('?')[0].split('#')[0];
+    if (href === currentPath || (currentPath === 'index.html' && (href === '' || href === 'index.html'))) {
       link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
 
@@ -57,8 +61,8 @@ function initNavbar() {
     const navItems = navCollapse.querySelectorAll('a');
     navItems.forEach(item => {
       item.addEventListener('click', () => {
-        if (window.innerWidth < 992) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+        if (window.innerWidth < 992 && typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navCollapse) || new bootstrap.Collapse(navCollapse, { toggle: false });
           if (bsCollapse) {
             bsCollapse.hide();
           }
