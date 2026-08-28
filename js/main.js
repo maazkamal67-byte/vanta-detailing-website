@@ -6,6 +6,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initNavbar();
+  initCinematicBackdrops();
+  initParallaxAndReveals();
   initBeforeAfterSlider();
   initStatsCounters();
   initGalleryFilter();
@@ -396,3 +398,72 @@ function initPreselectionFromParams() {
     }
   }
 }
+
+/* 10. Cinematic Backdrops, Smooth Parallax & Blur-to-Sharp Text Reveal */
+function initCinematicBackdrops() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  const parallaxImages = document.querySelectorAll('.cinematic-parallax-img');
+  if (!parallaxImages.length) return;
+
+  let ticking = false;
+
+  function updateParallax() {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+
+    parallaxImages.forEach(img => {
+      const section = img.closest('.cinematic-section') || img.parentElement;
+      if (!section) return;
+
+      const rect = section.getBoundingClientRect();
+      // Only compute if section is partially within viewport
+      if (rect.bottom >= -100 && rect.top <= windowHeight + 100) {
+        const offset = (rect.top / windowHeight) * 45; // Subtle parallax shift factor
+        img.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0) scale(1.05)`;
+      }
+    });
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Initial call
+  updateParallax();
+}
+
+function initParallaxAndReveals() {
+  const revealElements = document.querySelectorAll('.reveal-blur, .cinematic-section');
+  if (!revealElements.length) return;
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          const bgImg = entry.target.querySelector('.cinematic-bg-img');
+          if (bgImg) {
+            bgImg.classList.add('ambient-zoom');
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -8% 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback for older browsers
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
+}
+

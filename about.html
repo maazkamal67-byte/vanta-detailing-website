@@ -73,42 +73,55 @@
 
   <main id="mainContent">
     <!-- SUBPAGE HERO -->
-    <section class="subpage-hero text-center" id="aboutHero">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop" 
-           alt="Sleek luxury sports car detailing brand story background" 
-           class="subpage-hero-bg">
-      <div class="subpage-hero-overlay"></div>
+    <section class="subpage-hero cinematic-section text-center" id="aboutHero">
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop" 
+             alt="Sleek luxury sports car detailing brand story background" 
+             class="cinematic-bg-img cinematic-parallax-img ambient-zoom"
+             loading="eager">
+        <div class="subpage-hero-overlay"></div>
+      </div>
+      <div class="ambient-light-beam"></div>
 
-      <div class="container subpage-hero-content" data-aos="fade-up">
+      <div class="container subpage-hero-content cinematic-content" data-aos="fade-up">
         <span class="badge-label mb-3">THE VANTA PHILOSOPHY</span>
-        <h1 class="heading-hero text-white mb-3">BUILT AROUND BETTER CAR CARE.</h1>
-        <p class="lead-text mx-auto" style="max-width: 650px;">
+        <h1 class="heading-hero text-white mb-3 reveal-blur is-revealed">BUILT AROUND BETTER CAR CARE.</h1>
+        <p class="lead-text mx-auto reveal-blur is-revealed delay-100" style="max-width: 650px;">
           Born out of a simple observation: vehicle owners who value their cars shouldn't have to choose between subpar roadside washes and losing an entire weekend at a detailing shop.
         </p>
       </div>
     </section>
 
-    <!-- BRAND STORY SPLIT -->
-    <section class="section-py section-bg-dark" id="storySection">
-      <div class="container">
+    <!-- BRAND STORY SPLIT WITH CINEMATIC BACKDROP -->
+    <section class="section-py cinematic-section" id="storySection">
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1800&auto=format&fit=crop" 
+             alt="Luxury vehicle paint depth background" 
+             class="cinematic-bg-img cinematic-parallax-img"
+             loading="lazy">
+        <div class="cinematic-overlay-dark"></div>
+        <div class="cinematic-overlay-accent"></div>
+      </div>
+
+      <div class="container cinematic-content">
         <div class="row align-items-center g-5">
           <div class="col-lg-6" data-aos="fade-right">
             <span class="badge-label mb-3">OUR HERITAGE & MISSION</span>
-            <h2 class="heading-section text-white mb-4">
+            <h2 class="heading-section text-white mb-4 reveal-blur">
               REDEFINING THE MOBILE<br>
               <span style="color: var(--accent-champagne);">DETAILING EXPERIENCE</span>
             </h2>
-            <p class="lead-text mb-3">
+            <p class="lead-text mb-3 reveal-blur delay-100">
               VANTA was founded to bring concours-level automotive rejuvenation directly to your private garage, driveway, or workplace.
             </p>
-            <p class="text-secondary mb-3">
+            <p class="text-secondary mb-3 reveal-blur delay-200">
               Traditional mobile valeting too often relies on abrasive brushes, recycled harsh water, and hurried techniques that leave fine scratches and hologram swirls in your clear coat. We inverted this entire model.
             </p>
-            <p class="text-secondary mb-4">
+            <p class="text-secondary mb-4 reveal-blur delay-300">
               By outfitting specialized mobile studio vans with multi-stage deionization filtration (producing 0 TDS mineral-free water), temperature-regulated steam extractors, and calibrated dual-action polishers, we deliver true studio-grade paint correction and protection anywhere.
             </p>
             
-            <div class="d-flex flex-wrap gap-4 pt-2 border-top border-secondary border-opacity-10">
+            <div class="d-flex flex-wrap gap-4 pt-2 border-top border-secondary border-opacity-10 reveal-blur delay-300">
               <div>
                 <strong class="d-block text-white h5 mb-0">100% Self-Sufficient</strong>
                 <span class="text-muted small">Onboard power & pure filtered water</span>
@@ -132,12 +145,20 @@
     </section>
 
     <!-- WHY VANTA? 4 ADVANTAGES -->
-    <section class="section-py section-bg-surface" id="whyVantaSection">
-      <div class="container">
+    <section class="section-py cinematic-section" id="whyVantaSection">
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1800&auto=format&fit=crop" 
+             alt="Luxury vehicle styling accents background" 
+             class="cinematic-bg-img cinematic-parallax-img"
+             loading="lazy">
+        <div class="cinematic-overlay-dark"></div>
+      </div>
+
+      <div class="container cinematic-content">
         <div class="text-center section-header" data-aos="fade-up">
           <span class="badge-label mb-2">THE VANTA ADVANTAGE</span>
-          <h2 class="heading-section text-white mt-2">WHY CHOOSE VANTA?</h2>
-          <p class="lead-text mx-auto" style="max-width: 600px;">
+          <h2 class="heading-section text-white mt-2 reveal-blur">WHY CHOOSE VANTA?</h2>
+          <p class="lead-text mx-auto reveal-blur delay-100" style="max-width: 600px;">
             Four core pillars that set our mobile automotive detailing standard apart.
           </p>
         </div>

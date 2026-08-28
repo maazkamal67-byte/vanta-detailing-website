@@ -73,16 +73,20 @@
 
   <main id="mainContent">
     <!-- SUBPAGE HERO -->
-    <section class="subpage-hero text-center" id="contactHero">
-      <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=2000&auto=format&fit=crop" 
-           alt="Cockpit automotive detailing booking background" 
-           class="subpage-hero-bg">
-      <div class="subpage-hero-overlay"></div>
+    <section class="subpage-hero cinematic-section text-center" id="contactHero">
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=2000&auto=format&fit=crop" 
+             alt="Cockpit automotive detailing booking background" 
+             class="cinematic-bg-img cinematic-parallax-img ambient-zoom"
+             loading="eager">
+        <div class="subpage-hero-overlay"></div>
+      </div>
+      <div class="ambient-light-beam"></div>
 
-      <div class="container subpage-hero-content" data-aos="fade-up">
+      <div class="container subpage-hero-content cinematic-content" data-aos="fade-up">
         <span class="badge-label mb-3">CONCIERGE BOOKING</span>
-        <h1 class="heading-hero text-white mb-3">LET'S DETAIL YOUR CAR.</h1>
-        <p class="lead-text mx-auto" style="max-width: 650px;">
+        <h1 class="heading-hero text-white mb-3 reveal-blur is-revealed">LET'S DETAIL YOUR CAR.</h1>
+        <p class="lead-text mx-auto reveal-blur is-revealed delay-100" style="max-width: 650px;">
           Tell us about your vehicle and the service you're looking for. Our mobile studio comes directly to your location with self-contained power and deionized water.
         </p>
       </div>

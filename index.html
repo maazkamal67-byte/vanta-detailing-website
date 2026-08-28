@@ -73,18 +73,19 @@
 
   <main id="mainContent">
     <!-- HERO SECTION -->
-    <section class="hero-vanta" id="heroSection">
+    <section class="hero-vanta cinematic-section" id="heroSection">
       <div class="hero-bg-wrapper">
         <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=2070&auto=format&fit=crop" 
              alt="Luxury Porsche 911 GT3 in dark studio detailing finish" 
-             class="hero-bg-img" 
+             class="hero-bg-img cinematic-parallax-img ambient-zoom" 
              loading="eager">
         <div class="hero-overlay"></div>
       </div>
+      <div class="ambient-light-beam"></div>
 
       <div class="container hero-content text-center text-lg-start">
         <div class="row align-items-center">
-          <div class="col-lg-9 col-xl-8" data-aos="fade-up" data-aos-duration="1000">
+          <div class="col-lg-9 col-xl-8 hero-enter-animate">
             <div class="mb-3 d-flex flex-wrap align-items-center gap-2">
               <span class="badge-label">
                 <span class="hero-divider-line"></span>
@@ -96,16 +97,16 @@
               </span>
             </div>
             
-            <h1 class="heading-hero mb-3 text-white">
+            <h1 class="heading-hero mb-3 text-white reveal-blur is-revealed">
               YOUR CAR.<br>
               <span style="color: var(--accent-champagne);">OUR CRAFT.</span>
             </h1>
 
-            <p class="lead-text mb-4 pe-lg-5" style="max-width: 620px;">
+            <p class="lead-text mb-4 pe-lg-5 reveal-blur is-revealed delay-100" style="max-width: 620px;">
               Professional mobile detailing designed to restore, protect and maintain your vehicle wherever you are. Equipped with self-contained DI pure water and electrical systems.
             </p>
 
-            <div class="d-flex flex-column flex-sm-row gap-3 pt-2 justify-content-center justify-content-lg-start">
+            <div class="d-flex flex-column flex-sm-row gap-3 pt-2 justify-content-center justify-content-lg-start reveal-blur is-revealed delay-200">
               <a href="contact.html" class="btn btn-vanta btn-vanta-primary" id="heroPrimaryCta">
                 <i class="bi bi-calendar-check"></i>
                 <span>BOOK A DETAIL</span>
@@ -116,7 +117,7 @@
               </a>
             </div>
 
-            <div class="mt-4 pt-3 d-flex align-items-center gap-3 justify-content-center justify-content-lg-start">
+            <div class="mt-4 pt-3 d-flex align-items-center gap-3 justify-content-center justify-content-lg-start reveal-blur is-revealed delay-300">
               <div class="d-flex text-warning">
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star-fill ms-1"></i>
@@ -194,23 +195,33 @@
       </div>
     </section>
 
-    <!-- INTRO SPLIT SECTION -->
-    <section class="section-py section-bg-dark" id="introSection">
-      <div class="container">
+    <!-- INTRO SPLIT SECTION WITH CINEMATIC BACKDROP -->
+    <section class="section-py cinematic-section" id="introSection">
+      <!-- Background Automotive Photography with Dark Luxury Overlay -->
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1800&auto=format&fit=crop" 
+             alt="Deep ceramic gloss paint reflection background" 
+             class="cinematic-bg-img cinematic-parallax-img"
+             loading="lazy">
+        <div class="cinematic-overlay-dark"></div>
+        <div class="cinematic-overlay-accent"></div>
+      </div>
+
+      <div class="container cinematic-content">
         <div class="row align-items-center g-5">
           <div class="col-lg-6" data-aos="fade-right">
             <span class="badge-label mb-3">CONVENIENCE MEETS EXCELLENCE</span>
-            <h2 class="heading-section text-white mb-4">
+            <h2 class="heading-section text-white mb-4 reveal-blur">
               DETAILING THAT<br>
               <span style="color: var(--accent-champagne);">COMES TO YOU.</span>
             </h2>
-            <p class="lead-text mb-4">
+            <p class="lead-text mb-4 reveal-blur delay-100">
               Skip the inconvenience of waiting at detailing shops or risking scratch-prone conveyor washes. VANTA brings a master-grade detailing studio directly to your driveway, executive car park, or garage.
             </p>
-            <p class="text-secondary mb-4">
+            <p class="text-secondary mb-4 reveal-blur delay-200">
               Our mobile units arrive fully self-sufficient with onboard deionized spot-free water, whisper-quiet power generators, specialized warm air blowers, and precision multi-stage dual-action polishers. We treat your vehicle with the obsessive care it deserves.
             </p>
-            <div class="pt-2">
+            <div class="pt-2 reveal-blur delay-300">
               <a href="about.html" class="btn btn-vanta btn-vanta-outline-gold" id="introAboutBtn">
                 <span>ABOUT VANTA</span>
                 <i class="bi bi-arrow-right"></i>
@@ -230,13 +241,22 @@
       </div>
     </section>
 
-    <!-- SERVICES PREVIEW -->
-    <section class="section-py section-bg-surface" id="servicesPreview">
-      <div class="container">
+    <!-- SERVICES PREVIEW WITH CINEMATIC BACKDROP -->
+    <section class="section-py cinematic-section" id="servicesPreview">
+      <!-- Background Automotive Silhouette Layer -->
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1800&auto=format&fit=crop" 
+             alt="Exotic vehicle silhouette contours background" 
+             class="cinematic-bg-img cinematic-parallax-img"
+             loading="lazy">
+        <div class="cinematic-overlay-dark"></div>
+      </div>
+
+      <div class="container cinematic-content">
         <div class="text-center section-header" data-aos="fade-up">
           <span class="badge-label mb-2">PRECISION PACKAGES</span>
-          <h2 class="heading-section text-white mt-2">OUR DETAILING SERVICES</h2>
-          <p class="lead-text mx-auto" style="max-width: 600px;">
+          <h2 class="heading-section text-white mt-2 reveal-blur">OUR DETAILING SERVICES</h2>
+          <p class="lead-text mx-auto reveal-blur delay-100" style="max-width: 600px;">
             Engineered treatments tailored to restore factory brilliance and protect your automotive investment.
           </p>
         </div>
@@ -405,13 +425,22 @@
       </div>
     </section>
 
-    <!-- 3-STEP PROCESS -->
-    <section class="section-py section-bg-surface" id="processSection">
-      <div class="container">
+    <!-- 3-STEP PROCESS WITH CINEMATIC BACKDROP -->
+    <section class="section-py cinematic-section" id="processSection">
+      <!-- Automotive Workshop Craftsmanship Backdrop -->
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=1800&auto=format&fit=crop" 
+             alt="Precision detailing rinse and foam process background" 
+             class="cinematic-bg-img cinematic-parallax-img"
+             loading="lazy">
+        <div class="cinematic-overlay-dark"></div>
+      </div>
+
+      <div class="container cinematic-content">
         <div class="text-center section-header" data-aos="fade-up">
           <span class="badge-label mb-2">HOW IT WORKS</span>
-          <h2 class="heading-section text-white mt-2">SEAMLESS 3-STEP PROCESS</h2>
-          <p class="lead-text mx-auto" style="max-width: 600px;">
+          <h2 class="heading-section text-white mt-2 reveal-blur">SEAMLESS 3-STEP PROCESS</h2>
+          <p class="lead-text mx-auto reveal-blur delay-100" style="max-width: 600px;">
             Enjoy luxury vehicle care without altering your schedule.
           </p>
         </div>
@@ -465,7 +494,7 @@
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4" data-aos="fade-up">
           <div>
             <span class="badge-label mb-2">PORTFOLIO OF CRAFT</span>
-            <h2 class="heading-section text-white mt-2">RECENT VEHICLES</h2>
+            <h2 class="heading-section text-white mt-2 reveal-blur">RECENT VEHICLES</h2>
           </div>
           
           <!-- Gallery Filter Tabs -->
@@ -529,13 +558,23 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="section-py section-bg-surface" id="testimonialsSection">
-      <div class="container">
+    <!-- TESTIMONIALS WITH CINEMATIC BACKDROP -->
+    <section class="section-py cinematic-section" id="testimonialsSection">
+      <!-- Luxury Sedan Showroom Night Ambience Layer -->
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1800&auto=format&fit=crop" 
+             alt="Discerning vehicle owners luxury garage reflections background" 
+             class="cinematic-bg-img cinematic-parallax-img"
+             loading="lazy">
+        <div class="cinematic-overlay-dark"></div>
+        <div class="cinematic-overlay-accent"></div>
+      </div>
+
+      <div class="container cinematic-content">
         <div class="text-center section-header" data-aos="fade-up">
           <span class="badge-label mb-2">CLIENT EXPERIENCES</span>
-          <h2 class="heading-section text-white mt-2">TESTIMONIALS</h2>
-          <p class="lead-text mx-auto" style="max-width: 600px;">
+          <h2 class="heading-section text-white mt-2 reveal-blur">TESTIMONIALS</h2>
+          <p class="lead-text mx-auto reveal-blur delay-100" style="max-width: 600px;">
             Trusted by discerning owners across the UK, Canada, and Europe.
           </p>
         </div>
@@ -624,21 +663,23 @@
     </section>
 
     <!-- FINAL CINEMATIC CTA -->
-    <section class="section-py position-relative overflow-hidden text-center text-white" id="finalCtaSection" style="background: #060709;">
-      <div class="position-absolute top-0 start-0 w-100 h-100" style="opacity: 0.15;">
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000&auto=format&fit=crop" 
+    <section class="section-py cinematic-section text-center text-white" id="finalCtaSection">
+      <div class="cinematic-bg-wrap">
+        <img src="https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?q=80&w=2000&auto=format&fit=crop" 
              alt="Luxury vehicle finish background" 
-             class="w-100 h-100 object-fit-cover">
+             class="cinematic-bg-img cinematic-parallax-img ambient-zoom"
+             loading="lazy">
+        <div class="cinematic-overlay-dark"></div>
+        <div class="cinematic-overlay-accent"></div>
       </div>
-      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at center, transparent 20%, #060709 90%);"></div>
 
-      <div class="container position-relative z-2" data-aos="fade-up">
+      <div class="container cinematic-content" data-aos="fade-up">
         <span class="badge-label mb-3">CONCIERGE DETAILING AT YOUR DOOR</span>
-        <h2 class="heading-section mb-3">READY TO BRING YOUR CAR BACK TO LIFE?</h2>
-        <p class="lead-text mx-auto mb-4" style="max-width: 580px;">
+        <h2 class="heading-section mb-3 reveal-blur">READY TO BRING YOUR CAR BACK TO LIFE?</h2>
+        <p class="lead-text mx-auto mb-4 reveal-blur delay-100" style="max-width: 580px;">
           Book professional mobile detailing at a time and place that works for you. No queues, no hassle, only pristine results.
         </p>
-        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center pt-2">
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center pt-2 reveal-blur delay-200">
           <a href="contact.html" class="btn btn-vanta btn-vanta-primary" id="finalCtaQuoteBtn">
             <i class="bi bi-send-check"></i>
             <span>REQUEST A QUOTE</span>

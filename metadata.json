@@ -2,5 +2,7 @@
   "name": "VANTA DETAILING",
   "description": "Premium Mobile Car Care - A modern, dark luxury website with interactive transformation slider, service packages, and conversion-focused booking system.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
