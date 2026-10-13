@@ -3,7 +3,7 @@
  * Handles Navigation, Before/After Slider, Counters, Form Validation, Modals, Gallery Filters, & Estimator
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAll() {
   initScrollEffects();
   initNavbar();
   initCinematicBackdrops();
@@ -15,7 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initEstimatorWidget();
   initCoverageChecker();
   initPreselectionFromParams();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
 
 /* 1. Scroll Progress & Sticky Navbar */
 function initScrollEffects() {
@@ -44,17 +50,33 @@ function initScrollEffects() {
 /* 2. Navbar active state & mobile close on click */
 function initNavbar() {
   const pathParts = window.location.pathname.split('/').filter(Boolean);
-  const lastPart = pathParts.length ? pathParts[pathParts.length - 1] : '';
-  const currentPath = (lastPart.endsWith('.html') ? lastPart : 'index.html').split('?')[0].split('#')[0];
-  const navLinks = document.querySelectorAll('.nav-link-vanta');
+  let lastPart = pathParts.length ? pathParts[pathParts.length - 1] : '';
+  if (!lastPart || lastPart === 'index' || lastPart === 'index.html') {
+    lastPart = 'index.html';
+  } else if (!lastPart.includes('.')) {
+    lastPart = lastPart + '.html';
+  }
+  const currentPath = lastPart.split('?')[0].split('#')[0];
+  const navLinks = document.querySelectorAll('.nav-link-vanta, .navbar-nav .nav-link');
 
   navLinks.forEach(link => {
-    const href = (link.getAttribute('href') || '').replace(/^\.\//, '').split('?')[0].split('#')[0];
+    let href = (link.getAttribute('href') || '').replace(/^\.\//, '').split('?')[0].split('#')[0];
+    if (!href || href === '/' || href === 'index') href = 'index.html';
+    if (!href.includes('.') && href !== '#') href = href + '.html';
+
     if (href === currentPath || (currentPath === 'index.html' && (href === '' || href === 'index.html'))) {
       link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
     } else {
       link.classList.remove('active');
+      link.removeAttribute('aria-current');
     }
+
+    // Immediate tactile feedback on click (prevents any dark flash)
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
   });
 
   // Mobile menu close on click
